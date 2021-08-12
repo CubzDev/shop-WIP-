@@ -1,0 +1,44 @@
+doctype html
+html(lang='en').no-js
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    
+    title Shobba - Home
+    
+    meta(name="description" content="Official Shobba Webshop")
+    
+    link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css')
+    
+    style
+      include css/demo.css
+      include css/index.css
+    script
+      include viewsjs/modernizr-custom.js
+  body
+  
+    include components/navbar.pug
+    
+    // **Pages Stack**
+    div.pages-stack
+    
+      // ** Home Page *
+      include components/home.pug
+      
+      // ** Products Page **
+      include components/shop.pug
+      
+      // ** Product Info Page **
+      include components/info.pug
+        
+    button.menu-button
+      span Menu
+    
+    script
+      include viewsjs/classie.js
+      include viewsjs/main.js
+    script(src='https://unpkg.com/aos@next/dist/aos.js')
+    script AOS.init();
+      
